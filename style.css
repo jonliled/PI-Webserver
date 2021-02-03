@@ -1,0 +1,101 @@
+:root {
+    /* Colors */
+    --blk: #191716;
+    --wht: #F5F5F4;
+    --dwht: #ECECEA;
+    --lblk: #2B2826;
+    --ylw: #E6AF2E;
+    --lywl: #EAB948;
+    --blu: #2892D7;
+    --lblu: #419EDC;
+    --red: #9A031E;
+    --lred: #B40424;
+    --grn: #708B75;
+    --lgrn: #829B87;
+
+    --bg: var(--blk);
+    --fg: var(--wht);
+
+    --primary: var(--blu);
+    --accent: var(--ylw);
+
+
+}
+
+body {
+    margin: 0;
+    /* padding: 0; */
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: Cantarell, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dnd h1 h2 h3 h4 h5 h6 body nav div p a {
+    --primary: var(--red);
+}
+
+h1 {
+    border-top: solid 5px var(--primary);
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    color: var(--primary);
+    border-top: solid 2px var(--primary);
+    text-align: right;
+    padding: 0 1rem 0 0;
+}
+
+p {
+    text-align: justify;
+    padding: 1em 1em 2em 1em;
+}
+
+.description {
+    background-image: linear-gradient(90deg, var(--lblk), var(--bg));
+    padding: 0.5em, 0.5em, 0.5em 5;
+    color: var(--dwht);
+}
+
+.description p {
+    font-style: italic;
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: var(--primary);
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: var(--bg);
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-right: solid 5px var(--bg);
+    transition: ease 500ms;
+}
+
+.navbar a:hover {
+    background-color: var(--accent);
+    transition: ease 500ms;
+}
+
+
+}
