@@ -18,21 +18,15 @@
 
     --primary: var(--blu);
     --accent: var(--ylw);
-
-
 }
 
 body {
     margin: 0;
-    /* padding: 0; */
     background-color: var(--bg);
     color: var(--fg);
     font-family: Cantarell, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.dnd h1 h2 h3 h4 h5 h6 body nav div p a {
-    --primary: var(--red);
-}
 
 h1 {
     border-top: solid 5px var(--primary);
@@ -49,8 +43,9 @@ h6 {
     text-transform: uppercase;
     color: var(--primary);
     border-top: solid 2px var(--primary);
-    text-align: right;
+    text-align: center;
     padding: 0 1rem 0 0;
+
 }
 
 p {
@@ -59,9 +54,13 @@ p {
 }
 
 .description {
-    background-image: linear-gradient(90deg, var(--lblk), var(--bg));
-    padding: 0.5em, 0.5em, 0.5em 5;
+    background-color: red;
+    background: linear-gradient(90deg, var(--bg), var(--lblk));
+    /* background-size: 400% 400%; */
+    animation-direction: backwards;
+    padding: 0.5em 0.5em 0.5em 0.5em;
     color: var(--dwht);
+    animation: gradient-fade 30s ease infinite;
 }
 
 .description p {
@@ -97,9 +96,71 @@ a:hover {
     transition: ease 500ms;
 }
 
-
+.server-status {
+    /* position: fixed; */
+    /* bottom: 0; */
+    margin: 5em auto 0 auto;
+    width: 50%;
+    height: 3em;
+    background-color: var(--blu);
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--fg);
+    transition: ease 500ms;
 }
 
-.status {
-    display: none;
+.server-up {
+    background-color: var(--grn);
+}
+
+.server-up:hover {
+    background-color: var(--lgrn);
+}
+
+
+.server-down {
+    background: linear-gradient(90deg, var(--red), var(--lred));
+    background-size: 400% 400%;
+    animation: gradient-fade 3s ease infinite;
+    /* animation-fill-mode: forwards; */
+}
+
+.server-down:hover {
+    /* transition: ease 500ms; */
+    animation: gradient-fade 3s ease infinite;
+    color: darkgray;
+}
+
+.box {
+    display: grid;
+    background-color: var(--primary);
+    color: magenta;
+}
+
+.box a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+
+
+
+
+@keyframes gradient-fade {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
 }
