@@ -1,5 +1,4 @@
 <?php include 'header.php'; ?>
-<?php header('Access-Control-Allow-Origin: *'); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./serverstatus.js"></script>
 
@@ -11,14 +10,19 @@
     </div>
 
 <h2>World building tools</h2>
+<div class="container">
 <a href="https://app.legendkeeper.com/a/worlds/cke9mb6xsvab50756m3q3p5dg/atlas/cke9mb6z2vabe0756l1owt66d" target="_blank">LegendKeeper</a>
 <a href="https://app.fantasy-calendar.com/calendars/1284e365791e01a930a7267871ecc8e2" target="_blank">Calendar</a>
-
-<h2>Character tools</h2>
 <a href="https://www.dndbeyond.com/campaigns/997832" target="_blank">D&D Beyond</a>
+</div>
 
 
 <h2>FVTT server status</h2>
 <a id="status-box" class="server-status server-up" href="#"></a>
+
+<h2>Temporary link to FVTT server</h2>
+<div class="container">
+<a href="http://www.jonliled.com:30000">FVTT</a>
+</div>
 
 </body>

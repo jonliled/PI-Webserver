@@ -7,6 +7,7 @@ function ping() {
 
     $.ajax({
         url: "http://www.jonliled.com:30000",
+        crossDomain: true,
         success: function(result) {
             document.getElementById('status-box').classList.remove("server-down");
             document.getElementById('status-box').classList.add("server-up");

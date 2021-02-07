@@ -45,7 +45,7 @@ h6 {
     border-top: solid 2px var(--primary);
     text-align: center;
     padding: 0 1rem 0 0;
-
+    margin: 2em 0 3em 0;
 }
 
 p {
@@ -55,12 +55,11 @@ p {
 
 .description {
     background-color: red;
-    background: linear-gradient(90deg, var(--bg), var(--lblk));
-    /* background-size: 400% 400%; */
-    animation-direction: backwards;
+    background: linear-gradient(90deg, var(--bg), var(--lblk), var(--bg));
+    background-size: 400% 400%;
     padding: 0.5em 0.5em 0.5em 0.5em;
     color: var(--dwht);
-    animation: gradient-fade 30s ease infinite;
+    animation: gradient-fade 30s ease-in-out infinite;
 }
 
 .description p {
@@ -123,44 +122,63 @@ a:hover {
 
 
 .server-down {
-    background: linear-gradient(90deg, var(--red), var(--lred));
+    background: repeating-linear-gradient(45deg, var(--red), var(--red) 20px, var(--lred) 20px, var(--lred) 40px);
     background-size: 400% 400%;
-    animation: gradient-fade 3s ease infinite;
-    /* animation-fill-mode: forwards; */
+    transition: ease-in 1s;
 }
 
 .server-down:hover {
-    /* transition: ease 500ms; */
-    animation: gradient-fade 3s ease infinite;
+    transition: ease;
+    background: repeating-linear-gradient(45deg, var(--red), var(--red) 20px, var(--lred) 20px, var(--lred) 40px);
+    background-size: 400% 400%;
+    animation: gradient-fade 10s ease-in-out infinite;
     color: darkgray;
 }
 
-.box {
+.container {
     display: grid;
-    background-color: var(--primary);
-    color: magenta;
+    margin: auto;
+    width: 75%;
+    height: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+
+    /* background-color: var(--primary); */
+    align-items: center;
 }
 
-.box a {
-    color: var(--red);
+.container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: auto;
+    font-weight: bold;
+    color: var(--bg);
     text-decoration: none;
+    background-color: var(--primary);
+    transition: ease 300ms;
 }
 
-
-
-
+.container a:hover {
+    transition: ease 300ms;
+    background-color: var(--accent);
+}
 
 @keyframes gradient-fade {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
 
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 0%;
+
     }
 
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
+
     }
+
 
 }

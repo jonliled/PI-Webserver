@@ -1,3 +1,4 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
 <!DOCTYPE html>
 
 <head>
@@ -10,5 +11,4 @@
 <nav class="navbar">
     <a href="index.php">Home</a>
     <a href="dnd.php">D&D</a>
-    <a href="new.php">test</a>
 </nav>
